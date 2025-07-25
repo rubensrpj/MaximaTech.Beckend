@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaximaTech.Backend", "MaximaTech.Backend\MaximaTech.Backend.csproj", "{5DFB6314-8BE7-4986-8B36-A6EC7C9770EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6679C0B3-49AA-424D-874C-9324BC394BD9} = {6679C0B3-49AA-424D-874C-9324BC394BD9}
+		{FC4CD33F-67FE-4BDE-B51F-97D54F52894B} = {FC4CD33F-67FE-4BDE-B51F-97D54F52894B}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaximaTech.Backend.Tests", "MaximaTech.Backend.Tests\MaximaTech.Backend.Tests.csproj", "{63A5BAB8-C378-48C0-98A8-DD927924E767}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DFB6314-8BE7-4986-8B36-A6EC7C9770EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFB6314-8BE7-4986-8B36-A6EC7C9770EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFB6314-8BE7-4986-8B36-A6EC7C9770EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFB6314-8BE7-4986-8B36-A6EC7C9770EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A5BAB8-C378-48C0-98A8-DD927924E767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A5BAB8-C378-48C0-98A8-DD927924E767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A5BAB8-C378-48C0-98A8-DD927924E767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A5BAB8-C378-48C0-98A8-DD927924E767}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A3488F8-803F-4E74-A006-D33D05CAAD36}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"hygen": "^6.2.11",
+		"vercel": "^33.4.0"
+	}
+}

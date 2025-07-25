@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "redhat.vscode-yaml",
+        "ritwickdey.liveserver",
+        "editorconfig.editorconfig",
+        "isudox.vscode-jetbrains-keybindings"
+    ]
+}

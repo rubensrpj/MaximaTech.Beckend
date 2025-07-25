@@ -1,0 +1,11 @@
+using MaximaTech.Backend.Infra.DataAccess;
+using MaximaTech.Backend.Modules.v1.Produtos.Model;
+
+namespace MaximaTech.Backend.Modules.v1.Produtos._02_Services
+{
+    public interface IProdutoService : IService<Produto>
+    {
+        Task<bool> Update(ProdutoUpdateDto produtoUpdateDto);
+    }
+
+}
