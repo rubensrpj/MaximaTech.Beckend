@@ -97,7 +97,7 @@ cd MaximaTech.Backend
 
 "ConnectionStrings": {
 
-  "DefaultConnection": "User Id=postgres.itgqenloioctdiduipbq;Password=uev1npy6DPM\\\*fvz4jzf;Server=aws-0-sa-east-1.pooler.supabase.com;Port=5432;Database=postgres"
+  "DefaultConnection": "User Id=postgres.itgqenloioctdiduipbq;Password=uev1npy6DPM*fvz4jzf;Server=aws-0-sa-east-1.pooler.supabase.com;Port=5432;Database=postgres"
 }
 
 ```
