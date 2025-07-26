@@ -8,6 +8,7 @@ namespace MaximaTech.Backend.Modules.v1.Produtos._03_Repositories;
 public class ProdutoRepository : IProdutoRepository
 {
     private readonly string? _connectionString;
+
     public ProdutoRepository(IConfiguration config)
     {
         _connectionString = config.GetConnectionString("DefaultConnection");
@@ -16,7 +17,16 @@ public class ProdutoRepository : IProdutoRepository
     public async Task<IEnumerable<Produto>> GetAll()
     {
         await using NpgsqlConnection conn = new NpgsqlConnection(_connectionString);
-        string sql = @"SELECT p.*, d.codigo AS DepartamentoCodigo, d.nome AS DepartamentoNome
+        string sql = @"SELECT 
+                        p.id, 
+                        p.codigo, 
+                        p.descricao, 
+                        p.departamento_id AS ""DepartamentoId"", 
+                        p.preco, 
+                        p.status, 
+                        p.criado_em, 
+                        d.codigo AS ""DepartamentoCodigo"", 
+                        d.nome AS ""DepartamentoNome""
                     FROM produtos p
                     JOIN departamentos d ON d.id = p.departamento_id
                     WHERE p.status = TRUE";
@@ -27,11 +37,19 @@ public class ProdutoRepository : IProdutoRepository
     public async Task<Produto> GetById(Guid id)
     {
         await using NpgsqlConnection conn = new NpgsqlConnection(_connectionString);
-        string sql = @"SELECT p.*, d.codigo AS DepartamentoCodigo, d.nome AS DepartamentoNome
+        string sql = @"SELECT 
+                        p.id, 
+                        p.codigo, 
+                        p.descricao, 
+                        p.departamento_id AS ""DepartamentoId"", 
+                        p.preco, 
+                        p.status, 
+                        p.criado_em, 
+                        d.codigo AS ""DepartamentoCodigo"", 
+                        d.nome AS ""DepartamentoNome""
                     FROM produtos p
                     JOIN departamentos d ON d.id = p.departamento_id
-                    WHERE p.status = TRUE
-                    AND p.id = @Id";
+                    WHERE p.status = TRUE";
         IEnumerable<Produto> produtos = await conn.QueryAsync<Produto>(sql, new { Id = id });
         return produtos.FirstOrDefault() ?? new Produto();
     }
